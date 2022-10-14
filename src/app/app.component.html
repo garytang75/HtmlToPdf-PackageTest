@@ -1,0 +1,21 @@
+<div>
+  <p>HTML Testing</p>
+</div>
+<button (click)="convert()">Test Convert Here</button>
+
+
+<div id="document" [innerHtml]="htmlString | sanitizehtml"></div>
+
+
+
+<div #canvas id="pdftemp" [innerHtml]="htmlTemplate|sanitizehtml" style="width:21cm; height:29.7cm;"></div>
+
+<template #tableHtml id="tableHtml">
+  <table  >
+    <ng-container *ngFor="let item of testTable">
+      <tr><td><h2>{{item}}</h2></td></tr> 
+      <tr *ngFor="let item of testTable"><td>{{item}}</td></tr>
+    </ng-container>
+  </table>
+
+</template>
